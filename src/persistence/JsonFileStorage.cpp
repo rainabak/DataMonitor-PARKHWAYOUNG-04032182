@@ -18,19 +18,30 @@ std::string JsonFileStorage::load() const
     if (!exists())
         return "";
 
-    std::ifstream file(m_path);
-    if (!file.is_open())
+    std::string json;
     {
-        std::cerr << "[오류] 파일을 열 수 없습니다: " << m_path.string() << "\n";
-        return "";
-    }
-
-    std::ostringstream oss;
-    oss << file.rdbuf();
-    std::string json = oss.str();
+        std::ifstream file(m_path);
+        if (!file.is_open())
+        {
+            std::cerr << "[오류] 파일을 열 수 없습니다: " << m_path.string() << "\n";
+            return "";
+        }
+        std::ostringstream oss;
+        oss << file.rdbuf();
+        json = oss.str();
+    } // ifstream이 여기서 닫힘 — rename 전에 핸들 해제
 
     if (json.empty())
         return "";
+
+    // UTF-8 BOM(EF BB BF) 제거 — Visual Studio가 붙이는 경우 대응
+    if (json.size() >= 3 &&
+        static_cast<unsigned char>(json[0]) == 0xEF &&
+        static_cast<unsigned char>(json[1]) == 0xBB &&
+        static_cast<unsigned char>(json[2]) == 0xBF)
+    {
+        json.erase(0, 3);
+    }
 
     if (!isValidJson(json))
     {
