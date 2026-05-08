@@ -65,10 +65,7 @@ void JsonFileStorage::save(const std::string& json) const
     {
         std::cerr << "[JsonFileStorage] 저장 실패 (파일 교체 불가): " << ec.message() << "\n";
         std::filesystem::remove(tmpPath, ec);
-        return;
     }
-
-    std::cout << "[JsonFileStorage] 저장 성공: " << m_path.string() << "\n";
 }
 
 // ── private ──────────────────────────────────────────────────────────────────

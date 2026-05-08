@@ -82,10 +82,7 @@ void SampleRepository::add(const Sample& sample)
 std::vector<Sample> SampleRepository::findAll() const
 {
     if (!m_storage.exists())
-    {
-        std::cout << "[안내] 시료 데이터 파일이 없습니다. 빈 목록으로 표시합니다.\n";
         return {};
-    }
 
     std::vector<Sample> result;
     int nextId;
