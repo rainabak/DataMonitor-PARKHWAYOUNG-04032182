@@ -37,12 +37,19 @@ void MonitoringController::handleChoice(int choice)
 
 void MonitoringController::handleDashboard()
 {
+    const auto summary  = m_service.getOrderSummary();
+    const auto statuses = m_service.getSampleStatuses();
+    m_view.showDashboard(summary, statuses);
 }
 
 void MonitoringController::handleOrderSummary()
 {
+    const auto summary = m_service.getOrderSummary();
+    m_view.showOrderSummary(summary);
 }
 
 void MonitoringController::handleSampleList()
 {
+    const auto statuses = m_service.getSampleStatuses();
+    m_view.showSampleList(statuses);
 }
