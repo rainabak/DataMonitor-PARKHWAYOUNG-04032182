@@ -9,13 +9,10 @@ static const std::string SEP_S = "--------------------------------------------\n
 
 static std::string toStatusLabel(StockStatus status)
 {
-    switch (status)
-    {
-    case StockStatus::SURPLUS:  return "여유";
-    case StockStatus::SHORTAGE: return "부족";
-    case StockStatus::DEPLETED: return "고갈";
-    default:                    return "-";
-    }
+    if (status == StockStatus::SURPLUS)  return "여유";
+    if (status == StockStatus::SHORTAGE) return "부족";
+    if (status == StockStatus::DEPLETED) return "고갈";
+    return "-";
 }
 
 static void printHeader()
