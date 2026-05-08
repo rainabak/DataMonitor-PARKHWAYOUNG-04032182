@@ -2,9 +2,9 @@
 
 struct OrderSummary
 {
-    int countReceived   { 0 };
-    int countInProgress { 0 };
-    int countCompleted  { 0 };
-    int countCancelled  { 0 };
-    int total           { 0 };
+    int countReserved  { 0 };
+    int countProducing { 0 };
+    int countConfirmed { 0 };
+    int countRelease   { 0 };
+    int total          { 0 };
 };

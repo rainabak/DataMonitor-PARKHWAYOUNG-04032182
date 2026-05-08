@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <string>
 
 struct Sample
@@ -6,4 +6,5 @@ struct Sample
     int         id;
     std::string name;
     std::string description;
+    int         stock { 0 };
 };

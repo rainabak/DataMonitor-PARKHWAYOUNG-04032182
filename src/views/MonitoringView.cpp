@@ -33,8 +33,8 @@ void MonitoringView::showMessage(const std::string& msg) const
     std::cout << "\n" << msg << "\n";
 }
 
-void MonitoringView::showDashboard(const OrderSummary&        summary,
-                                   const std::vector<Sample>& samples) const
+void MonitoringView::showDashboard(const OrderSummary&              summary,
+                                   const std::vector<SampleStatus>& statuses) const
 {
 }
 
@@ -42,6 +42,6 @@ void MonitoringView::showOrderSummary(const OrderSummary& summary) const
 {
 }
 
-void MonitoringView::showSampleList(const std::vector<Sample>& samples) const
+void MonitoringView::showSampleList(const std::vector<SampleStatus>& statuses) const
 {
 }

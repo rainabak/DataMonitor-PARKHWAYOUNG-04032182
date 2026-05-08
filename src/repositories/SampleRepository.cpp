@@ -9,9 +9,10 @@ static std::string toJson(const Sample& s)
 {
     std::ostringstream oss;
     oss << "{"
-        << "\"id\":"            << s.id                               << ","
-        << "\"name\":\""        << JsonUtil::escapeString(s.name)     << "\","
-        << "\"description\":\"" << JsonUtil::escapeString(s.description) << "\""
+        << "\"id\":"            << s.id                                  << ","
+        << "\"name\":\""        << JsonUtil::escapeString(s.name)        << "\","
+        << "\"description\":\"" << JsonUtil::escapeString(s.description) << "\","
+        << "\"stock\":"         << s.stock
         << "}";
     return oss.str();
 }
@@ -35,7 +36,8 @@ static Sample fromJson(const std::string& obj)
     {
         JsonUtil::readInt(obj,    "id"),
         JsonUtil::readString(obj, "name"),
-        JsonUtil::readString(obj, "description")
+        JsonUtil::readString(obj, "description"),
+        JsonUtil::readInt(obj,    "stock")
     };
 }
 
@@ -73,7 +75,7 @@ SampleRepository::SampleRepository(JsonFileStorage& storage)
 
 void SampleRepository::add(const Sample& sample)
 {
-    m_samples.push_back({ m_nextId++, sample.name, sample.description });
+    m_samples.push_back({ m_nextId++, sample.name, sample.description, sample.stock });
     persist();
 }
 

@@ -155,6 +155,7 @@
   <ItemGroup>
     <ClInclude Include="src\models\Item.h" />
     <ClInclude Include="src\models\ItemRepository.h" />
+    <ClInclude Include="src\models\SampleStatus.h" />
     <ClInclude Include="src\views\IView.h" />
     <ClInclude Include="src\views\ItemView.h" />
     <ClInclude Include="src\views\MainMenuView.h" />
