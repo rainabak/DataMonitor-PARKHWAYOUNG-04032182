@@ -192,3 +192,9 @@ DataMonitor/
 ├── PRD.md
 └── README.md
 ```
+
+## 테스트 화면
+<img width="893" height="762" alt="스크린샷 2026-05-08 142051" src="https://github.com/user-attachments/assets/caa96b9f-44db-4088-8821-e5a8afd4552a" />
+<img width="893" height="762" alt="스크린샷 2026-05-08 142059" src="https://github.com/user-attachments/assets/5669c3ce-0866-47a6-9d57-d070d9f8e007" />
+<img width="893" height="762" alt="스크린샷 2026-05-08 142104" src="https://github.com/user-attachments/assets/902b9233-9c8b-4d47-8322-cece74ff7467" />
+
