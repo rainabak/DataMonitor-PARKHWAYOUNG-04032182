@@ -150,6 +150,7 @@
     <ClCompile Include="src\persistence\JsonUtil.cpp" />
     <ClCompile Include="src\repositories\SampleRepository.cpp" />
     <ClCompile Include="src\repositories\OrderRepository.cpp" />
+    <ClCompile Include="src\services\MonitoringService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\models\Item.h" />
@@ -180,6 +181,8 @@
     <ClInclude Include="src\repositories\IOrderRepository.h" />
     <ClInclude Include="src\repositories\SampleRepository.h" />
     <ClInclude Include="src\repositories\OrderRepository.h" />
+    <ClInclude Include="src\models\OrderSummary.h" />
+    <ClInclude Include="src\services\MonitoringService.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

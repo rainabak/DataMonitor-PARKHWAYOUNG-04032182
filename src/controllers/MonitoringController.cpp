@@ -1,8 +1,9 @@
-﻿#include "MonitoringController.h"
+#include "MonitoringController.h"
 #include "../utils/ConsoleUtil.h"
 
-MonitoringController::MonitoringController(MonitoringView& view)
+MonitoringController::MonitoringController(MonitoringView& view, MonitoringService& service)
     : m_view(view)
+    , m_service(service)
 {
 }
 
@@ -14,9 +15,7 @@ void MonitoringController::run()
         m_view.showMenu();
 
         int choice = m_view.getMenuChoice();
-
-        if (choice == 0)
-            break;
+        if (choice == 0) break;
 
         handleChoice(choice);
         ConsoleUtil::pause();
@@ -25,17 +24,25 @@ void MonitoringController::run()
 
 void MonitoringController::handleChoice(int choice)
 {
-    ConsoleUtil::printSeparator();
     switch (choice)
     {
-    case 1:
-    case 2:
-    case 3:
-        m_view.showMessage("준비 중입니다.");
-        break;
+    case 1: handleDashboard();    break;
+    case 2: handleOrderSummary(); break;
+    case 3: handleSampleList();   break;
     default:
         m_view.showMessage("잘못된 입력입니다.");
         break;
     }
-    ConsoleUtil::printSeparator();
+}
+
+void MonitoringController::handleDashboard()
+{
+}
+
+void MonitoringController::handleOrderSummary()
+{
+}
+
+void MonitoringController::handleSampleList()
+{
 }

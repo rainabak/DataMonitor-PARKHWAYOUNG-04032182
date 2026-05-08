@@ -1,17 +1,17 @@
-﻿#include "MonitoringView.h"
+#include "MonitoringView.h"
 #include <iostream>
 #include <limits>
 
 void MonitoringView::showMenu() const
 {
-    std::cout << "============================\n";
-    std::cout << "         모니터링           \n";
-    std::cout << "============================\n";
-    std::cout << "  1. 현황 조회\n";
-    std::cout << "  2. 알림 목록\n";
-    std::cout << "  3. 리포트 출력\n";
+    std::cout << "============================================\n";
+    std::cout << "              [ 모니터링 ]\n";
+    std::cout << "============================================\n";
+    std::cout << "  1. 전체 Dashboard\n";
+    std::cout << "  2. 주문 상태별 집계\n";
+    std::cout << "  3. 시료 재고 현황\n";
     std::cout << "  0. 돌아가기\n";
-    std::cout << "============================\n";
+    std::cout << "============================================\n";
     std::cout << "선택: ";
 }
 
@@ -31,4 +31,17 @@ int MonitoringView::getMenuChoice() const
 void MonitoringView::showMessage(const std::string& msg) const
 {
     std::cout << "\n" << msg << "\n";
+}
+
+void MonitoringView::showDashboard(const OrderSummary&        summary,
+                                   const std::vector<Sample>& samples) const
+{
+}
+
+void MonitoringView::showOrderSummary(const OrderSummary& summary) const
+{
+}
+
+void MonitoringView::showSampleList(const std::vector<Sample>& samples) const
+{
 }
