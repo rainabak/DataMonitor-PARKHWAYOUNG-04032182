@@ -1,17 +1,17 @@
 {
   "nextId": 13,
   "items": [
-    { "id":  1, "sampleId": 1, "productName": "ì‹œë£Œ-Aí˜•", "customerName": "ì‚¼ì„±ì „ì",  "quantity": 3, "status": "RESERVED"  },
-    { "id":  2, "sampleId": 2, "productName": "ì‹œë£Œ-Bí˜•", "customerName": "SKí•˜ì´ë‹‰ìŠ¤","quantity": 2, "status": "RESERVED"  },
-    { "id":  3, "sampleId": 3, "productName": "ì‹œë£Œ-Cí˜•", "customerName": "ë§ˆì´í¬ë¡ ",  "quantity": 2, "status": "RESERVED"  },
-    { "id":  4, "sampleId": 1, "productName": "ì‹œë£Œ-Aí˜•", "customerName": "ì¸í…”",      "quantity": 4, "status": "PRODUCING" },
-    { "id":  5, "sampleId": 2, "productName": "ì‹œë£Œ-Bí˜•", "customerName": "TSMC",      "quantity": 3, "status": "PRODUCING" },
-    { "id":  6, "sampleId": 1, "productName": "ì‹œë£Œ-Aí˜•", "customerName": "ì‚¼ì„±ì „ì",  "quantity": 2, "status": "CONFIRMED" },
-    { "id":  7, "sampleId": 2, "productName": "ì‹œë£Œ-Bí˜•", "customerName": "SKí•˜ì´ë‹‰ìŠ¤","quantity": 5, "status": "CONFIRMED" },
-    { "id":  8, "sampleId": 1, "productName": "ì‹œë£Œ-Aí˜•", "customerName": "í€„ì»´",      "quantity": 1, "status": "RELEASE"   },
-    { "id":  9, "sampleId": 2, "productName": "ì‹œë£Œ-Bí˜•", "customerName": "ì—”ë¹„ë””ì•„",  "quantity": 2, "status": "RELEASE"   },
-    { "id": 10, "sampleId": 1, "productName": "ì‹œë£Œ-Aí˜•", "customerName": "ì• í”Œ",      "quantity": 5, "status": "REJECTED"  },
-    { "id": 11, "sampleId": 2, "productName": "ì‹œë£Œ-Bí˜•", "customerName": "ë§ˆì´í¬ë¡ ",  "quantity": 3, "status": "REJECTED"  },
-    { "id": 12, "sampleId": 3, "productName": "ì‹œë£Œ-Cí˜•", "customerName": "AMD",       "quantity": 1, "status": "REJECTED"  }
+    { "id":  1, "sampleId": 1, "productName": "½Ã·á-AÇü", "customerName": "»ï¼ºÀüÀÚ",  "quantity": 3, "status": "RESERVED"  },
+    { "id":  2, "sampleId": 2, "productName": "½Ã·á-BÇü", "customerName": "SKÇÏÀÌ´Ğ½º","quantity": 2, "status": "RESERVED"  },
+    { "id":  3, "sampleId": 3, "productName": "½Ã·á-CÇü", "customerName": "¸¶ÀÌÅ©·Ğ",  "quantity": 2, "status": "RESERVED"  },
+    { "id":  4, "sampleId": 1, "productName": "½Ã·á-AÇü", "customerName": "ÀÎÅÚ",      "quantity": 4, "status": "PRODUCING" },
+    { "id":  5, "sampleId": 2, "productName": "½Ã·á-BÇü", "customerName": "TSMC",      "quantity": 3, "status": "PRODUCING" },
+    { "id":  6, "sampleId": 1, "productName": "½Ã·á-AÇü", "customerName": "»ï¼ºÀüÀÚ",  "quantity": 2, "status": "CONFIRMED" },
+    { "id":  7, "sampleId": 2, "productName": "½Ã·á-BÇü", "customerName": "SKÇÏÀÌ´Ğ½º","quantity": 5, "status": "CONFIRMED" },
+    { "id":  8, "sampleId": 1, "productName": "½Ã·á-AÇü", "customerName": "Ä÷ÄÄ",      "quantity": 1, "status": "RELEASE"   },
+    { "id":  9, "sampleId": 2, "productName": "½Ã·á-BÇü", "customerName": "¿£ºñµğ¾Æ",  "quantity": 2, "status": "RELEASE"   },
+    { "id": 10, "sampleId": 1, "productName": "½Ã·á-AÇü", "customerName": "¾ÖÇÃ",      "quantity": 5, "status": "REJECTED"  },
+    { "id": 11, "sampleId": 2, "productName": "½Ã·á-BÇü", "customerName": "¸¶ÀÌÅ©·Ğ",  "quantity": 3, "status": "REJECTED"  },
+    { "id": 12, "sampleId": 3, "productName": "½Ã·á-CÇü", "customerName": "AMD",       "quantity": 1, "status": "REJECTED"  }
   ]
 }
