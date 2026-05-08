@@ -16,15 +16,12 @@ bool JsonFileStorage::exists() const
 std::string JsonFileStorage::load() const
 {
     if (!exists())
-    {
-        std::cout << "[JsonFileStorage] 파일 없음: " << m_path.string() << " (빈 데이터로 시작)\n";
         return "";
-    }
 
     std::ifstream file(m_path);
     if (!file.is_open())
     {
-        std::cerr << "[JsonFileStorage] 읽기 실패: " << m_path.string() << "\n";
+        std::cerr << "[오류] 파일을 열 수 없습니다: " << m_path.string() << "\n";
         return "";
     }
 
@@ -33,19 +30,15 @@ std::string JsonFileStorage::load() const
     std::string json = oss.str();
 
     if (json.empty())
-    {
-        std::cout << "[JsonFileStorage] 빈 파일: " << m_path.string() << " (빈 데이터로 시작)\n";
         return "";
-    }
 
     if (!isValidJson(json))
     {
-        std::cerr << "[JsonFileStorage] JSON 형식 오류: " << m_path.string() << "\n";
+        std::cerr << "[오류] JSON 형식 오류 — 파일을 백업하고 초기화합니다: " << m_path.string() << "\n";
         backupCorrupted();
         return "";
     }
 
-    std::cout << "[JsonFileStorage] 읽기 성공: " << m_path.string() << "\n";
     return json;
 }
 

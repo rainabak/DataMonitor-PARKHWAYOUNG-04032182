@@ -81,7 +81,16 @@ void OrderRepository::add(const Order& order)
 
 std::vector<Order> OrderRepository::findAll() const
 {
-    return m_orders;
+    if (!m_storage.exists())
+    {
+        std::cout << "[안내] 주문 데이터 파일이 없습니다. 빈 목록으로 표시합니다.\n";
+        return {};
+    }
+
+    std::vector<Order> result;
+    int nextId;
+    loadFromJson(m_storage.load(), result, nextId);
+    return result;
 }
 
 Order* OrderRepository::findById(int id)

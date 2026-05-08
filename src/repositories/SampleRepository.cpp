@@ -79,7 +79,16 @@ void SampleRepository::add(const Sample& sample)
 
 std::vector<Sample> SampleRepository::findAll() const
 {
-    return m_samples;
+    if (!m_storage.exists())
+    {
+        std::cout << "[안내] 시료 데이터 파일이 없습니다. 빈 목록으로 표시합니다.\n";
+        return {};
+    }
+
+    std::vector<Sample> result;
+    int nextId;
+    loadFromJson(m_storage.load(), result, nextId);
+    return result;
 }
 
 Sample* SampleRepository::findById(int id)
