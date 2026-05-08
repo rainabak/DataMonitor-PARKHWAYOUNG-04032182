@@ -1,6 +1,7 @@
-#include "MonitoringView.h"
+﻿#include "MonitoringView.h"
 #include <iostream>
 #include <limits>
+#include <string>
 
 static const std::string SEP   = "============================================\n";
 static const std::string SEP_S = "--------------------------------------------\n";
@@ -9,10 +10,25 @@ static const std::string SEP_S = "--------------------------------------------\n
 
 static std::string toStatusLabel(StockStatus status)
 {
-    if (status == StockStatus::SURPLUS)  return "여유";
+    /*if (status == StockStatus::SURPLUS)  return "여유";
     if (status == StockStatus::SHORTAGE) return "부족";
     if (status == StockStatus::DEPLETED) return "고갈";
-    return "-";
+    return "-";*/
+
+    switch (status)
+    {
+    case StockStatus::SURPLUS:
+        return std::string("여유");
+
+    case StockStatus::SHORTAGE:
+        return std::string("부족");
+
+    case StockStatus::DEPLETED:
+        return std::string("고갈");
+
+    default:
+        return std::string("-");
+    }
 }
 
 static void printHeader()
